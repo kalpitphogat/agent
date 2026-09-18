@@ -1,0 +1,87 @@
+{
+  "ml_stage": false,
+  "rules_covered": 18,
+  "rules_total": 18,
+  "rule_recall": {
+    "H01": [
+      3,
+      3
+    ],
+    "H02": [
+      3,
+      3
+    ],
+    "H03": [
+      3,
+      3
+    ],
+    "H04": [
+      3,
+      3
+    ],
+    "H05": [
+      3,
+      3
+    ],
+    "H06": [
+      3,
+      3
+    ],
+    "H07": [
+      3,
+      3
+    ],
+    "H08": [
+      3,
+      3
+    ],
+    "IB01": [
+      1,
+      1
+    ],
+    "IB02": [
+      1,
+      1
+    ],
+    "IB03": [
+      1,
+      1
+    ],
+    "IB04": [
+      1,
+      1
+    ],
+    "IB05": [
+      1,
+      1
+    ],
+    "IB06": [
+      1,
+      1
+    ],
+    "IB07": [
+      1,
+      1
+    ],
+    "IB08": [
+      1,
+      1
+    ],
+    "IB09": [
+      1,
+      1
+    ],
+    "IB10": [
+      1,
+      1
+    ]
+  },
+  "rule_recall_rate": 1.0,
+  "detection_rate": 1.0,
+  "false_positive_rate": 0.0,
+  "benign_below_threshold": 3,
+  "missed_rules": [],
+  "undetected_payloads": [],
+  "false_positives": [],
+  "passed": true
+}
