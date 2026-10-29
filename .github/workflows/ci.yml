@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    name: Test (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev,dashboard]"
+
+      - name: Run tests
+        env:
+          AF_DISABLE_ML: "true"
+        run: |
+          pytest tests/ -v --tb=short
+
+      # Fails if any of the 1035 corpus documents changes score, matched rule
+      # or evidence snippet. Regenerate deliberately with scripts/gen_golden.py.
+      - name: Verify detection output is unchanged
+        env:
+          AF_DISABLE_ML: "true"
+        run: |
+          python scripts/gen_golden.py --check
+
+      # Fails if a rule stops firing or a benign sample gets flagged.
+      - name: Built-in detection benchmark
+        env:
+          AF_DISABLE_ML: "true"
+        run: |
+          python benchmark.py
+

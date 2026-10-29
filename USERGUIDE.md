@@ -39,7 +39,7 @@ This guide walks through installation and every usage mode step by step.
 ### One-command install (recommended)
 
 ```bash
-git clone https://github.com/kalpitphogat/agentforensics
+git clone https://github.com/kalpitphogat/agent agentforensics
 cd agentforensics
 python install.py
 ```
@@ -525,5 +525,5 @@ taskkill /PID <PID> /F
 
 ## Getting Help
 
-- Open an issue: [github.com/kalpitphogat/agentforensics/issues](https://github.com/kalpitphogat/agentforensics/issues)
+- Open an issue: [github.com/kalpitphogat/agent/issues](https://github.com/kalpitphogat/agent/issues)
 - Check the README: [README.md](README.md)

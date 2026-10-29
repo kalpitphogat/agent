@@ -2,7 +2,11 @@
 
 **Real-time indirect prompt injection detection and forensics for LLM agents.**
 
-[![CI](https://github.com/kalpitphogat/agentforensics/actions/workflows/ci.yml/badge.svg)](https://github.com/kalpitphogat/agentforensics/actions)
+> **Team project.** This is a copy of [aparnaa19/AgentForensics](https://github.com/aparnaa19/AgentForensics)
+> by Aparnaa, Theepan Kumar Gandhi and Kalpit Phogat. My contributions: the guard-literal
+> pre-filter, the 1,035-document golden-output equivalence suite, CI, and the benchmark rewrite.
+
+[![CI](https://github.com/kalpitphogat/agent/actions/workflows/ci.yml/badge.svg)](https://github.com/kalpitphogat/agent/actions)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Tests](https://img.shields.io/badge/tests-309%20passing-brightgreen)](tests/)
@@ -41,7 +45,7 @@ afterwards.
 ## Quick start
 
 ```bash
-git clone https://github.com/kalpitphogat/agentforensics
+git clone https://github.com/kalpitphogat/agent agentforensics
 cd agentforensics
 pip install -e ".[dashboard,dev]"
 
@@ -481,7 +485,7 @@ MIT — see [LICENSE](LICENSE).
   author = {Aparnaa},
   title  = {AgentForensics: Real-Time Prompt Injection Detection and Forensics for LLM Agents},
   year   = {2026},
-  url    = {https://github.com/kalpitphogat/agentforensics},
+  url    = {https://github.com/aparnaa19/AgentForensics},
   license = {MIT}
 }
 ```
